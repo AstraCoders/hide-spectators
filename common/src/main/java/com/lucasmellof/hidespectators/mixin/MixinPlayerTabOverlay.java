@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import java.util.Comparator;
 import java.util.stream.Stream;
 
-@Mixin(value = PlayerTabOverlay.class, remap = false)
+@Mixin(value = PlayerTabOverlay.class)
 public class MixinPlayerTabOverlay {
 	@Inject(method = "decorateName", at = @At("HEAD"), cancellable = true)
 	public void onDecorateName(PlayerInfo playerInfo, MutableComponent name, org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable<Component> cir) {
