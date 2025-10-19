@@ -1,0 +1,11 @@
+{
+	"hide_spectators.configuration.hideSpectators": "Hide Spectators",
+	"hide_spectators.configuration.hideSpectators.description": "When enabled, players in spectator mode will be hidden from the player list and in-game.",
+
+	"hide_spectators.configuration.treatSpectatorsAsNormalPlayers": "Treat Spectators As Normal Players",
+	"hide_spectators.configuration.treatSpectatorsAsNormalPlayers.description": "When enabled, players in spectator mode will be treated as normal players for the purpose of visibility settings.",
+	"text.autoconfig.hide_spectators.title": "Hide Spectators Configuration",
+	"text.autoconfig.hide_spectators.option.hideSpectators": "Hide Spectators",
+	"text.autoconfig.hide_spectators.option.treatSpectatorsAsNormalPlayers": "Treat Spectators As Normal Players"
+
+}
