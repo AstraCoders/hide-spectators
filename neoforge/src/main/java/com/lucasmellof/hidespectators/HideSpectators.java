@@ -13,7 +13,7 @@ public class HideSpectators {
 	public HideSpectators(IEventBus eventBus, ModContainer container) {
 		container.registerConfig(ModConfig.Type.CLIENT, Config.SPEC);
 		CommonClass.init();
-		if (FMLLoader.getCurrent().getDist().isClient()) {
+		if (FMLLoader.getDist().isClient()) {
 			HideSpectatorsClient.init(container);
 		}
 	}

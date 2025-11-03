@@ -7,7 +7,6 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 /*
  * @author Lucasmellof, Lucas de Mello Freitas created on 19/10/2025
  */
-@EventBusSubscriber(modid = Constants.MOD_ID)
 public class Config {
 	private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 

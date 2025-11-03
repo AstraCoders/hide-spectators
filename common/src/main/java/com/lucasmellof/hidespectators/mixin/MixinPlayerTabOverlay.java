@@ -25,12 +25,13 @@ public class MixinPlayerTabOverlay {
 		}
 	}
 
-	@Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;III)V"))
-	public void onDraw(GuiGraphics instance, Font arg, Component arg2, int x, int y, int color) {
+	@Redirect(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/GuiGraphics;drawString(Lnet/minecraft/client/gui/Font;Lnet/minecraft/network/chat/Component;III)I"))
+	public int onDraw(GuiGraphics instance, Font arg, Component arg2, int x, int y, int color) {
 		if (Services.PLATFORM.showSpecsAsNormalPlayers()) {
 			color = -1;
 		}
 		instance.drawString(arg,arg2, x, y, color);
+		return x;
 	}
 	@Redirect(method = "getPlayerInfos", at = @At(value = "INVOKE", target = "Ljava/util/stream/Stream;sorted(Ljava/util/Comparator;)Ljava/util/stream/Stream;"))
 	public Stream<PlayerInfo> onPlayerInfo(Stream<PlayerInfo> instance, Comparator<? super PlayerInfo> comparator) {
